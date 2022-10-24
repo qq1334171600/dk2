@@ -1,0 +1,11 @@
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\dk2.exe.config
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\dk2.exe
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\dk2.pdb
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.csproj.AssemblyReference.cache
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.csproj.SuggestedBindingRedirects.cache
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.FormLogin.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.Properties.Resources.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.csproj.GenerateResource.cache
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.csproj.CoreCompileInputs.cache
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.exe
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.pdb
