@@ -1,16 +1,16 @@
-﻿namespace dk2
+﻿namespace dk2.form
 {
     partial class FormLogin
     {
         /// <summary>
-        /// 必需的设计器变量。
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 清理所有正在使用的资源。
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,44 +20,42 @@
             base.Dispose(disposing);
         }
 
-        #region Windows 窗体设计器生成的代码
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // lblTitle
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(205, 191);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(344, 57);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "你好呀";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblTitle.Text = "郭老师组研究生打卡程序\r\n";
+            // 
+            // lblSubText
+            // 
+            this.lblSubText.Location = new System.Drawing.Point(376, 421);
+            this.lblSubText.Text = "dev by zj V2.0";
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(750, 450);
             this.Name = "FormLogin";
             this.Text = "登录窗口";
+            this.ButtonLoginClick += FLogin_ButtonLoginClick;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
-        #endregion
+        private void FormLogin_ButtonLoginClick(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
 
-        private System.Windows.Forms.TextBox textBox1;
+        #endregion
     }
 }
-
