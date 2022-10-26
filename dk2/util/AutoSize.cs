@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,6 +11,11 @@ namespace dk2.util
 {
     class AutoSize
     {
+        public  AutoSize(float OldW,float OldH)
+        {
+            MainFormOldHeight = OldH;
+            MainFormOldWidth = OldW;
+        }
         public float MainFormOldWidth;
         public float MainFormOldHeight;
         public void setTag(Control cons)
@@ -29,25 +35,42 @@ namespace dk2.util
         /// <param name="cons">控件</param>
         public void setControls(float newx, float newy, Control cons)
         {
-            foreach (Control con in cons.Controls)
+                foreach (Control con in cons.Controls)
             {
-                string[] mytag = con.Tag.ToString().Split(new char[] { ':' });
-                float a = Convert.ToSingle(mytag[0]) * newx;
-                con.Width = (int)a;
-                a = Convert.ToSingle(mytag[1]) * newy;
-                con.Height = (int)(a);
-                a = Convert.ToSingle(mytag[2]) * newx;
-                con.Left = (int)(a);
-                a = Convert.ToSingle(mytag[3]) * newy;
-                con.Top = (int)(a);
-                Single currentSize = Convert.ToSingle(mytag[4]) * Math.Min(newx, newy);
-                con.Font = new Font(con.Font.Name, currentSize, con.Font.Style, con.Font.Unit);
-                if (con.Controls.Count > 0)
+                if (con.Tag != null)
                 {
-                    setControls(newx, newy, con);
+                    string[] mytag = con.Tag.ToString().Split(new char[] { ':' });
+                    float a = Convert.ToSingle(mytag[0]) * newx;
+                    con.Width = (int)a;
+                    a = Convert.ToSingle(mytag[1]) * newy;
+                    con.Height = (int)(a);
+                    a = Convert.ToSingle(mytag[2]) * newx;
+                    con.Left = (int)(a);
+                    a = Convert.ToSingle(mytag[3]) * newy;
+                    con.Top = (int)(a);
+                    Single currentSize = Convert.ToSingle(mytag[4]) * Math.Min(newx, newy);
+                    if (currentSize <= 0)
+                    {
+                        currentSize = 1;
+                    }else if (currentSize > Single.MaxValue)
+                    {
+                        currentSize = Single.MaxValue - 1;
+                    }
+                    con.Font = new Font(con.Font.Name, currentSize, con.Font.Style, con.Font.Unit);
+                    if (con.Controls.Count > 0)
+                    {
+                        setControls(newx, newy, con);
+                    }
                 }
+                
             }
         }
-       
+        public void clearPages(UIAsideMainFrame frame)
+        {
+            foreach(UIPage p in frame.GetPages<UIPage>())
+            {
+                //frame.RemovePage(p.PageIndex);
+            }
+        }
     }
 }

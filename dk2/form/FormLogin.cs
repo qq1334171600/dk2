@@ -16,6 +16,11 @@ namespace dk2.form
         public FormLogin()
         {
             InitializeComponent();
+            
+        }
+        public void FLogin_SetUiLine(string content)
+        {
+            uiLine2.Text = content;
         }
         private void FLogin_ButtonLoginClick(object sender, System.EventArgs e)
         {
