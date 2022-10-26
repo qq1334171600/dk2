@@ -104,30 +104,90 @@
     <Compile Include="form\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\PageAlterDaily.cs">
+    <Compile Include="page\PageTeacherTalk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="page\PageAlterDaily.Designer.cs">
+    <Compile Include="page\PageTeacherTalk.Designer.cs">
+      <DependentUpon>PageTeacherTalk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\PageRecordIdea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\PageRecordIdea.Designer.cs">
+      <DependentUpon>PageRecordIdea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\group\PageGroupOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\group\PageGroupOther.Designer.cs">
+      <DependentUpon>PageGroupOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\group\PageGroupNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\group\PageGroupNotice.Designer.cs">
+      <DependentUpon>PageGroupNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\group\PageGroupExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\group\PageGroupExpense.Designer.cs">
+      <DependentUpon>PageGroupExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\group\PageGroupLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\group\PageGroupLeave.Designer.cs">
+      <DependentUpon>PageGroupLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\daily\PageSelectDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\daily\PageSelectDaily.Designer.cs">
+      <DependentUpon>PageSelectDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\daily\PageAlterDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\daily\PageAlterDaily.Designer.cs">
       <DependentUpon>PageAlterDaily.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\PageAddDaily.cs">
+    <Compile Include="page\daily\PageAddDaily.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="page\PageAddDaily.Designer.cs">
+    <Compile Include="page\daily\PageAddDaily.Designer.cs">
       <DependentUpon>PageAddDaily.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\PageRegTeacher.cs">
+    <Compile Include="page\reg\PageRegTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="page\PageRegTeacher.Designer.cs">
+    <Compile Include="page\reg\PageRegTeacher.Designer.cs">
       <DependentUpon>PageRegTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\PageRegStu.cs">
+    <Compile Include="page\reg\PageRegStu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="page\.Designer.cs">
+    <Compile Include="page\reg\.Designer.cs">
       <DependentUpon>PageRegStu.cs</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\weekly\PageSelectWeekly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\weekly\PageSelectWeekly.Designer.cs">
+      <DependentUpon>PageSelectWeekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\weekly\PageAlterWeekly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\weekly\PageAlterWeekly.Designer.cs">
+      <DependentUpon>PageAlterWeekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\weekly\PageAddWeekly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\weekly\PageAddWeekly.Designer.cs">
+      <DependentUpon>PageAddWeekly.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,17 +201,47 @@
     <EmbeddedResource Include="form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\PageAddDaily.resx">
+    <EmbeddedResource Include="page\group\PageGroupNotice.resx">
+      <DependentUpon>PageGroupNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\group\PageGroupExpense.resx">
+      <DependentUpon>PageGroupExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\group\PageGroupLeave.resx">
+      <DependentUpon>PageGroupLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\daily\PageAddDaily.resx">
       <DependentUpon>PageAddDaily.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\PageAlterDaily.resx">
+    <EmbeddedResource Include="page\daily\PageAlterDaily.resx">
       <DependentUpon>PageAlterDaily.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\PageRegStu.resx">
+    <EmbeddedResource Include="page\group\PageGroupOther.resx">
+      <DependentUpon>PageGroupOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\PageRecordIdea.resx">
+      <DependentUpon>PageRecordIdea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\PageTeacherTalk.resx">
+      <DependentUpon>PageTeacherTalk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\reg\PageRegStu.resx">
       <DependentUpon>PageRegStu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\PageRegTeacher.resx">
+    <EmbeddedResource Include="page\reg\PageRegTeacher.resx">
       <DependentUpon>PageRegTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\daily\PageSelectDaily.resx">
+      <DependentUpon>PageSelectDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\weekly\PageAddWeekly.resx">
+      <DependentUpon>PageAddWeekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\weekly\PageAlterWeekly.resx">
+      <DependentUpon>PageAlterWeekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\weekly\PageSelectWeekly.resx">
+      <DependentUpon>PageSelectWeekly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

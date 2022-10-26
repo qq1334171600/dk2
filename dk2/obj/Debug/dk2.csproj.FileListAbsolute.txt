@@ -39,3 +39,13 @@ C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\System.Numerics.Vectors.
 C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageAddDaily.resources
 C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageAlterDaily.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageSelectDaily.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageGroupLeave.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageGroupExpense.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageGroupNotice.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageGroupOther.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.weekly.PageAddWeekly.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.weekly.PageAlterWeekly.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.weekly.PageSelectWeekly.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageRecordIdea.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageTeacherTalk.resources

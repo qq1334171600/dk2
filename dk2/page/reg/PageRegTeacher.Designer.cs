@@ -70,7 +70,7 @@
             this.uiTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.uiTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.uiTableLayoutPanel1.Size = new System.Drawing.Size(187, 345);
-            this.uiTableLayoutPanel1.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTableLayoutPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTableLayoutPanel1.TabIndex = 23;
             this.uiTableLayoutPanel1.TagString = null;
             // 
@@ -79,7 +79,7 @@
             this.uiLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel7.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel7.ForeColor = System.Drawing.Color.White;
             this.uiLabel7.Location = new System.Drawing.Point(3, 284);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(181, 52);
@@ -94,7 +94,7 @@
             this.uiLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel2.ForeColor = System.Drawing.Color.White;
             this.uiLabel2.Location = new System.Drawing.Point(3, 42);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(181, 51);
@@ -109,7 +109,7 @@
             this.uiLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel3.ForeColor = System.Drawing.Color.White;
             this.uiLabel3.Location = new System.Drawing.Point(3, 93);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(181, 45);
@@ -124,7 +124,7 @@
             this.uiLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel5.ForeColor = System.Drawing.Color.White;
             this.uiLabel5.Location = new System.Drawing.Point(3, 138);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(181, 47);
@@ -139,7 +139,7 @@
             this.uiLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel6.ForeColor = System.Drawing.Color.White;
             this.uiLabel6.Location = new System.Drawing.Point(3, 242);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(181, 42);
@@ -154,7 +154,7 @@
             this.uiLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(3, 0);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(181, 42);
@@ -169,7 +169,7 @@
             this.uiLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.uiLabel4.ForeColor = System.Drawing.Color.White;
             this.uiLabel4.Location = new System.Drawing.Point(3, 185);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(181, 57);
@@ -187,7 +187,7 @@
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Size = new System.Drawing.Size(181, 46);
-            this.uiButton1.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
             this.uiButton1.TabIndex = 22;
             this.uiButton1.Text = "注册";
             this.uiButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -237,7 +237,7 @@
             this.uiTextBoxRegOrg.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.uiTextBoxRegOrg.ShowText = false;
             this.uiTextBoxRegOrg.Size = new System.Drawing.Size(313, 42);
-            this.uiTextBoxRegOrg.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTextBoxRegOrg.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBoxRegOrg.TabIndex = 19;
             this.uiTextBoxRegOrg.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTextBoxRegOrg.Watermark = "";
@@ -257,7 +257,7 @@
             this.uiTextBoxRegTDirection.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.uiTextBoxRegTDirection.ShowText = false;
             this.uiTextBoxRegTDirection.Size = new System.Drawing.Size(313, 35);
-            this.uiTextBoxRegTDirection.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTextBoxRegTDirection.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBoxRegTDirection.TabIndex = 18;
             this.uiTextBoxRegTDirection.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTextBoxRegTDirection.Watermark = "";
@@ -277,7 +277,7 @@
             this.uiTextBoxRegTId.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.uiTextBoxRegTId.ShowText = false;
             this.uiTextBoxRegTId.Size = new System.Drawing.Size(313, 38);
-            this.uiTextBoxRegTId.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTextBoxRegTId.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBoxRegTId.TabIndex = 17;
             this.uiTextBoxRegTId.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTextBoxRegTId.Watermark = "";
@@ -297,7 +297,7 @@
             this.uiTextBoxRegTPhone.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.uiTextBoxRegTPhone.ShowText = false;
             this.uiTextBoxRegTPhone.Size = new System.Drawing.Size(313, 38);
-            this.uiTextBoxRegTPhone.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTextBoxRegTPhone.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBoxRegTPhone.TabIndex = 16;
             this.uiTextBoxRegTPhone.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTextBoxRegTPhone.Watermark = "";
@@ -317,7 +317,7 @@
             this.uiTextBoxRegTName.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.uiTextBoxRegTName.ShowText = false;
             this.uiTextBoxRegTName.Size = new System.Drawing.Size(313, 42);
-            this.uiTextBoxRegTName.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTextBoxRegTName.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBoxRegTName.TabIndex = 15;
             this.uiTextBoxRegTName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTextBoxRegTName.Watermark = "";
@@ -338,7 +338,7 @@
             this.uiTextBoxRegTPassword.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.uiTextBoxRegTPassword.ShowText = false;
             this.uiTextBoxRegTPassword.Size = new System.Drawing.Size(313, 40);
-            this.uiTextBoxRegTPassword.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiTextBoxRegTPassword.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBoxRegTPassword.TabIndex = 24;
             this.uiTextBoxRegTPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTextBoxRegTPassword.Watermark = "";
@@ -362,7 +362,7 @@
             this.Name = "PageRegTeacher";
             this.PageIndex = 1002;
             this.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.Text = "Form1";
+            this.Text = "导师注册";
             this.Resize += new System.EventHandler(this.PageRegTeacher_Resize);
             this.uiTableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -69,7 +69,10 @@ namespace dk2.util
         {
             foreach(UIPage p in frame.GetPages<UIPage>())
             {
-                //frame.RemovePage(p.PageIndex);
+                if (p.PageIndex < 2000)
+                {
+                    frame.RemovePage(p.PageIndex);
+                }
             }
         }
     }

@@ -24,6 +24,7 @@ namespace dk2.form
             InitializeComponent();
             //设置关联
             Aside.TabControl = MainTabControl;
+            Aside.SelectFirst();
             formLogin = new FormLogin();
             autoSizeTool = new AutoSize(this.Width,this.Height);
             /*autoSizeTool.MainFormOldWidth= this.Width;
@@ -140,6 +141,9 @@ namespace dk2.form
 
         }
 
-        
+        private void Aside_Click(object sender, EventArgs e)
+        {
+            uiSmoothLabelHeader.Text=Aside.SelectedNode.Text;
+        }
     }
 }
