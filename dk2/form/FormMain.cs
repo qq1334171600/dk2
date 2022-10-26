@@ -1,4 +1,5 @@
 ﻿using dk2.page;
+using dk2.page.weekly;
 using dk2.util;
 using Sunny.UI;
 using System;
@@ -23,6 +24,25 @@ namespace dk2.form
         {
             InitializeComponent();
             //设置关联
+            TreeNode parent = Aside.CreateNode("日报管理", 3000);
+            Aside.CreateChildNode(parent, AddPage(new PageSelectDaily()));
+            Aside.CreateChildNode(parent, AddPage(new PageAddDaily()));
+            Aside.CreateChildNode(parent, AddPage(new PageAlterDaily()));
+            
+            parent = Aside.CreateNode("周报管理", 5000);
+            Aside.CreateChildNode(parent, AddPage(new PageSelectWeekly()));
+            Aside.CreateChildNode(parent, AddPage(new PageAddWeekly()));
+            Aside.CreateChildNode(parent, AddPage(new PageAlterWeekly()));
+            
+            parent = Aside.CreateNode("组内事务管理", 4000);
+            Aside.CreateChildNode(parent, AddPage(new PageGroupNotice()));
+            Aside.CreateChildNode(parent, AddPage(new PageGroupExpense()));
+            Aside.CreateChildNode(parent, AddPage(new PageGroupLeave()));
+            Aside.CreateChildNode(parent, AddPage(new PageGroupOther()));
+
+            Aside.CreateNode(AddPage(new PageRecordIdea()));
+            Aside.CreateNode(AddPage(new PageTeacherTalk()));
+
             Aside.TabControl = MainTabControl;
             Aside.SelectFirst();
             formLogin = new FormLogin();

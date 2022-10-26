@@ -34,11 +34,11 @@
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.ForeColor = System.Drawing.Color.White;
+            this.uiLabel1.ForeColor = System.Drawing.Color.Tomato;
             this.uiLabel1.Location = new System.Drawing.Point(196, 167);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(355, 127);
-            this.uiLabel1.Style = Sunny.UI.UIStyle.DarkBlue;
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "修改日报,请期待";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -47,13 +47,13 @@
             // PageAlterDaily
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.uiLabel1);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.DarkGray;
             this.Name = "PageAlterDaily";
             this.PageIndex = 3002;
             this.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.Style = Sunny.UI.UIStyle.DarkBlue;
             this.Text = "修改日报";
             this.ResumeLayout(false);
 

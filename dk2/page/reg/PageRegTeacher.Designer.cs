@@ -79,7 +79,7 @@
             this.uiLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel7.ForeColor = System.Drawing.Color.White;
+            this.uiLabel7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel7.Location = new System.Drawing.Point(3, 284);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(181, 52);
@@ -94,7 +94,7 @@
             this.uiLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.ForeColor = System.Drawing.Color.White;
+            this.uiLabel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel2.Location = new System.Drawing.Point(3, 42);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(181, 51);
@@ -109,7 +109,7 @@
             this.uiLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.ForeColor = System.Drawing.Color.White;
+            this.uiLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel3.Location = new System.Drawing.Point(3, 93);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(181, 45);
@@ -124,7 +124,7 @@
             this.uiLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.ForeColor = System.Drawing.Color.White;
+            this.uiLabel5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel5.Location = new System.Drawing.Point(3, 138);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(181, 47);
@@ -139,7 +139,7 @@
             this.uiLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.ForeColor = System.Drawing.Color.White;
+            this.uiLabel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel6.Location = new System.Drawing.Point(3, 242);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(181, 42);
@@ -154,7 +154,7 @@
             this.uiLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.ForeColor = System.Drawing.Color.White;
+            this.uiLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel1.Location = new System.Drawing.Point(3, 0);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(181, 42);
@@ -169,7 +169,7 @@
             this.uiLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.ForeColor = System.Drawing.Color.White;
+            this.uiLabel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uiLabel4.Location = new System.Drawing.Point(3, 185);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(181, 57);
