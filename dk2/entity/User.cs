@@ -12,11 +12,14 @@ namespace dk2.entity
         private string teacherName;
         private bool loginStatus = false;//登陆状态
         private int userRoleId;
+        private string fileUrl;
 
         public string StuId { get => stuId; set => stuId = value; }
         public string TeacherName { get => teacherName; set => teacherName = value; }
         public bool LoginStatus { get => loginStatus; set => loginStatus = value; }
         public int UserRoleId { get => userRoleId; set => userRoleId = value; }
+        public string FileUrl { get => fileUrl; set => fileUrl = value; }
+
 
         public static User _CurrentUser = null;
 

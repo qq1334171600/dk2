@@ -70,9 +70,9 @@ namespace dk2.form
             this.Footer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.Footer.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.Footer.ForeColor = System.Drawing.Color.White;
-            this.Footer.Location = new System.Drawing.Point(252, 670);
+            this.Footer.Location = new System.Drawing.Point(202, 670);
             this.Footer.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
-            this.Footer.Size = new System.Drawing.Size(1026, 48);
+            this.Footer.Size = new System.Drawing.Size(1076, 48);
             this.Footer.Style = Sunny.UI.UIStyle.DarkBlue;
             // 
             // Header
@@ -82,15 +82,15 @@ namespace dk2.form
             this.Header.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.Header.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.Header.ForeColor = System.Drawing.Color.White;
-            this.Header.Location = new System.Drawing.Point(252, 36);
+            this.Header.Location = new System.Drawing.Point(202, 36);
             this.Header.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(58)))), ((int)(((byte)(92)))));
-            this.Header.Size = new System.Drawing.Size(1026, 90);
+            this.Header.Size = new System.Drawing.Size(1076, 90);
             this.Header.Style = Sunny.UI.UIStyle.DarkBlue;
             // 
             // Aside
             // 
             this.Aside.Location = new System.Drawing.Point(2, 36);
-            this.Aside.Size = new System.Drawing.Size(250, 682);
+            this.Aside.Size = new System.Drawing.Size(200, 682);
             this.Aside.Style = Sunny.UI.UIStyle.DarkBlue;
             this.Aside.Click += new System.EventHandler(this.Aside_Click);
             // 
