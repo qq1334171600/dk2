@@ -49,3 +49,6 @@ C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.weekly.PageAlte
 C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.weekly.PageSelectWeekly.resources
 C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageRecordIdea.resources
 C:\Users\zj\source\repos\qq1334171600\dk2\dk2\obj\Debug\dk2.page.PageTeacherTalk.resources
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\Qiniu.dll
+C:\Users\zj\source\repos\qq1334171600\dk2\dk2\bin\Debug\Newtonsoft.Json.xml

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Qiniu.Http;
+using Qiniu.Storage;
+using Qiniu.Util;
+using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -60,14 +64,19 @@ namespace dk2.util
             myResponseStream.Close();
             return retString;
         }
-/*        public static async Task<HttpResult> UploadPicture(string filePath)
+        public static async Task<HttpResult> UploadPicture(string filePath,string key)
         {
+            if (filePath.IsNullOrEmpty() || key.IsNullOrEmpty() || key.IsNullOrWhiteSpace())
+            {
+                return null;
+            }
             string AccessKey = "mjd6uCjQwnEAJIuBO7SVEZmgKc9oIwS3qHGWJx_O";
             string SecretKey = "f7N8e_NqIWD32WZiq1tHz64amL60WbK28Ikl1nK8";
             Mac mac = new Mac(AccessKey, SecretKey);
             // 上传文件名
-            string key = "dk/" + Status.stuId + "/" + DateTime.Now.ToString("yyyy-MM-dd/HH-mm-ss")+ ".jpg";
-            Status.picUrl = key;
+            //string key = ""; 
+            //"dk/" + Status.stuId + "/" + DateTime.Now.ToString("yyyy-MM-dd/HH-mm-ss") + ".jpg";
+            //Status.picUrl = key;
             // 存储空间名
             string Bucket = "z1334";
             // 设置上传策略
@@ -89,8 +98,8 @@ namespace dk2.util
             config.ChunkSize = ChunkUnit.U512K;
             // 表单上传
             FormUploader target = new FormUploader(config);
-            HttpResult result =await target.UploadFile(filePath, key, token, null);
+            HttpResult result = await target.UploadFile(filePath, key, token, null);
             return result;
         }
-*/    }
+    }
 }
