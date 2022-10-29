@@ -200,6 +200,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="util\AutoSize.cs" />
     <Compile Include="util\CheckUtil.cs" />
+    <Compile Include="util\FileSizeUtil.cs" />
+    <Compile Include="util\RtfUtil.cs" />
     <Compile Include="util\DBUtil.cs" />
     <Compile Include="util\HttpUtil.cs" />
     <EmbeddedResource Include="form\FormLogin.resx">

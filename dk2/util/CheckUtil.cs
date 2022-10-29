@@ -20,6 +20,17 @@ namespace dk2.util
 
             return flag;
         }
+        public static bool CheckInputEmptyWithRichBox(UIRichTextBox edit, UIPage page, string desc)
+        {
+            bool flag = edit.Text.IsValid();
+            if (!flag)
+            {
+                page.ShowWarningDialog(desc);
+                edit.Focus();
+            }
+
+            return flag;
+        }
         public static bool CheckInputRange(UITextBox edit,UIPage page,int min, int max, string desc)
         {
             bool flag = edit.IntValue >= min && edit.IntValue <= max;

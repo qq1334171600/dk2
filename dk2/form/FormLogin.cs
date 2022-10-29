@@ -44,6 +44,7 @@ namespace dk2.form
                 else if (dt.Rows[0][0].ToString().Trim()==Password)
                 {
                     User.currentUser.LoginStatus = true;
+                    User.currentUser.StuId = UserName;
                     IsLogin = true;
                     Close();
                 }

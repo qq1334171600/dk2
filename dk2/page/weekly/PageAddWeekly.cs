@@ -17,5 +17,10 @@ namespace dk2.page.weekly
         {
             InitializeComponent();
         }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
