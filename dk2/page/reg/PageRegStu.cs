@@ -77,14 +77,14 @@ namespace dk2.page
                     ShowWarningTip("该学生已存在，请确认学号输入是否有误，有疑问请联系管理员！");
                     return;
                 }
-                /*string insertSql = string.Format(
+                string insertSql = string.Format(
                     "INSERT INTO table_stu (stu_name,stu_sex,stu_phone,stu_id,stu_direction,teacher_name,stu_password)" +
                                      "VALUES(\"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\")",
-                    name,sex,phone,stuId,researchDirection,teacher,password);
+                    name, sex, phone, stuId, researchDirection, teacher, password);
                 if (dB.sqlExcute(insertSql) > 0)
                 {
                     ShowSuccessTip("注册成功");
-                }*/
+                }
             }
         }
     }

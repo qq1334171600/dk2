@@ -659,8 +659,8 @@
             this.Controls.Add(this.uiTitlePanel1);
             this.Name = "PageAddDaily";
             this.PageIndex = 3001;
-            this.Style = Sunny.UI.UIStyle.Blue;
             this.Text = "发布日报";
+            this.Initialize += new System.EventHandler(this.PageAddDaily_Initialize);
             this.uiTitlePanel1.ResumeLayout(false);
             this.uiTitlePanel2.ResumeLayout(false);
             this.uiGroupBox1.ResumeLayout(false);

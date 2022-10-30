@@ -1,4 +1,5 @@
 ﻿using dk2.entity;
+using dk2.form;
 using dk2.util;
 using Qiniu.Http;
 using Sunny.UI;
@@ -20,6 +21,7 @@ namespace dk2.page
     {
         string rtfDirPath = Application.StartupPath + "\\rtf\\";
         DBUtil dB;
+        DataTable data;
         public PageAddDaily()
         {
             InitializeComponent();
@@ -31,11 +33,23 @@ namespace dk2.page
             }
             uiProcessBar1.Value = 0;
             dB=new DBUtil();
+            if (User.currentUser.LoginStatus == false)
+            {
+                FormLogin form = new FormLogin();
+                form.ShowDialog();
+                this.SetDisabled();
+            }
+            else
+            {
+                this.SetEnabled();
+            }
 
         }
 
         private void uiListBox1_DoubleClick(object sender, EventArgs e)
         {
+            ShowWarningDialog("选择的任务的taskId为：" + data.Rows[uiListBox1.SelectedIndex]["task_id"]);
+            User.currentUser.CurrentTaskId = data.Rows[uiListBox1.SelectedIndex]["task_id"].ToString();
             uiTextBoxTaskDetail.Text = uiListBox1.SelectedItem.ToString();
         }
 
@@ -60,6 +74,7 @@ namespace dk2.page
                 if (taskCompletionContent)
                 {
                     uiProcessBar1.Value += 20;
+                    ShowInfoDialog("文档上传成功，链接地址为:"+User.currentUser.FileUrl);
                 }
                 bool problem = await RtfUtil.currentInstance.SaveAndUploadWithRtf(stuId, "Problem", uiRichTextBoxProblem);
                 if (problem)
@@ -167,7 +182,7 @@ namespace dk2.page
                 "AND table_dk_main.stu_id = \"{0}\" " +
                 "AND dk_week_no = {1} " +
                 "AND dk_week_of_day ={2}", User.currentUser.StuId,weekNo, dayOfWeek);
-            DataTable data=dB.selectReturnDataTable(taskSql, "t_task");
+            data=dB.selectReturnDataTable(taskSql, "t_task");
             int length=data.Rows.Count;
             if (length > 0)
             {
@@ -178,6 +193,20 @@ namespace dk2.page
             }
             ShowWarningDialog(taskSql);
             
+        }
+
+        private void PageAddDaily_Initialize(object sender, EventArgs e)
+        {
+            if (User.currentUser.LoginStatus == false)
+            {
+                FormLogin form = new FormLogin();
+                form.ShowDialog();
+                this.SetDisabled();
+            }
+            else
+            {
+                this.SetEnabled();
+            }
         }
     }
 }

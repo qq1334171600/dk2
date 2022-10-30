@@ -1,4 +1,6 @@
-﻿using Org.BouncyCastle.Utilities.Encoders;
+﻿using dk2.entity;
+using dk2.page;
+using Org.BouncyCastle.Utilities.Encoders;
 using Qiniu.Http;
 using Sunny.UI;
 using Sunny.UI.Win32;
@@ -10,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using User = dk2.entity.User;
 
 namespace dk2.util
 {
@@ -42,15 +45,26 @@ namespace dk2.util
             if (result.Code == 200)
             {
                 DBUtil dB = new DBUtil();
-                string insertSql = string.Format(
-                    "" +
-                                     "VALUES(\"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\")",
-                    name, sex, phone, stuId, researchDirection, teacher, password);
-                if (dB.sqlExcute(insertSql) > 0)
+                switch (type)
                 {
-                    ShowSuccessTip("注册成功");
+                    case "TaskCompletionContent":
+                        string sql = string.Format(
+                    "UPDATE table_tasks SET task_completion_content = \"{0}\" WHERE task_id = {1}", HttpUtil.OssRootUrl + remoteFileName, User.currentUser.CurrentTaskId);
+                        if (dB.sqlExcute(sql) > 0)
+                        {
+                            User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    default:
+                        break;
                 }
                 return true;
+                //由于tasks是由上周日报生成的，所以这里使用update，并记录最后updateTime
+                
             }
             else
             {

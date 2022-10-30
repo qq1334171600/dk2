@@ -15,6 +15,7 @@ namespace dk2.util
 {
     static class HttpUtil
     {
+        public static string OssRootUrl = "http://7.zhangjian.link/";
         public static string GetMacByNetworkInterface()
         {
             try
