@@ -102,5 +102,51 @@ namespace dk2.util
             HttpResult result = await target.UploadFile(filePath, key, token, null);
             return result;
         }
+        /// <summary>
+        /// http下载文件
+        /// </summary>
+        /// <param name="url">下载文件地址</param>
+        /// <returns></returns>
+        public static string HttpDownload(string url)
+        {
+            using (var client = new WebClient())
+            {
+                string tempFile = Path.GetTempFileName();
+                client.DownloadFile(url, tempFile);//下载临时文件
+                //Console.WriteLine("Using " + tempFile);
+                //return FileToStream(tempFile, true);
+                return tempFile;
+            }
+        }
+        /// <summary>
+        /// 文件转流
+        /// </summary>
+        /// <param name="fileName">文件路径</param>
+        /// <param name="isDelete">是否删除临时文件</param>
+        /// <returns></returns>
+        public static Stream FileToStream(string fileName, bool isDelete = false)
+        {
+
+            //打开文件
+
+            FileStream fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+            // 读取文件的 byte[]
+
+            byte[] bytes = new byte[fileStream.Length];
+
+            fileStream.Read(bytes, 0, bytes.Length);
+
+            fileStream.Close();
+
+            // 把 byte[] 转换成 Stream
+
+            Stream stream = new MemoryStream(bytes);
+            if (isDelete)
+            {
+                File.Delete(fileName);//删除临时文件
+            }
+            return stream;
+        }
     }
 }
