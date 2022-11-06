@@ -33,7 +33,7 @@ namespace dk2.page
             }
             uiProcessBar1.Value = 0;
             dB=new DBUtil();
-            if (User.currentUser.LoginStatus == false)
+           /* if (User.currentUser.LoginStatus == false)
             {
                 FormLogin form = new FormLogin();
                 form.ShowDialog();
@@ -42,7 +42,7 @@ namespace dk2.page
             else
             {
                 this.SetEnabled();
-            }
+            }*/
 
         }
 

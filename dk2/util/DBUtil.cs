@@ -11,7 +11,7 @@ namespace dk2.util
 {
     public class DBUtil
     {
-        public static string address = "server=120.48.99.11;port=3306;user=dk2;password=5845331588Zjqq@; database=dk2;";
+        public static string address = "server=120.48.99.11;port=3306;user=dk3;password=5845331588Zjqq@; database=dk3;";
         public MySqlConnection GetCon()
         {
             return new MySqlConnection(address);
