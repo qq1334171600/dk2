@@ -37,6 +37,7 @@
             this.uiLabelLiteratureAuthor = new Sunny.UI.UILabel();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiTitlePanel5 = new Sunny.UI.UITitlePanel();
+            this.uiListBox1 = new Sunny.UI.UIListBox();
             this.uiRichTextBoxProblemCompletion = new Sunny.UI.UIRichTextBox();
             this.uiTitlePanel4 = new Sunny.UI.UITitlePanel();
             this.uiRichTextBoxProblem = new Sunny.UI.UIRichTextBox();
@@ -59,16 +60,15 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiComboBoxWeekNo = new Sunny.UI.UIComboBox();
             this.uiButtonPublish = new Sunny.UI.UIButton();
-            this.uiListBox1 = new Sunny.UI.UIListBox();
             this.uiTitlePanel8 = new Sunny.UI.UITitlePanel();
-            this.uiMarkLabel4 = new Sunny.UI.UIMarkLabel();
-            this.uiListBoxNextTasksList = new Sunny.UI.UIListBox();
-            this.uiMarkLabel3 = new Sunny.UI.UIMarkLabel();
-            this.uiTextBoxNextWeekTaskDetail = new Sunny.UI.UITextBox();
-            this.uiButtonNextWeekAddTask = new Sunny.UI.UIButton();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiComboBoxNextWeekSelectDay = new Sunny.UI.UIComboBox();
+            this.uiButtonNextWeekAddTask = new Sunny.UI.UIButton();
+            this.uiTextBoxNextWeekTaskDetail = new Sunny.UI.UITextBox();
+            this.uiMarkLabel3 = new Sunny.UI.UIMarkLabel();
+            this.uiMarkLabel4 = new Sunny.UI.UIMarkLabel();
+            this.uiListBoxNextTasksList = new Sunny.UI.UIListBox();
             this.uiTitlePanel7.SuspendLayout();
             this.uiTitlePanel6.SuspendLayout();
             this.uiTitlePanel5.SuspendLayout();
@@ -220,6 +220,22 @@
             this.uiTitlePanel5.Text = "文献查阅及理解";
             this.uiTitlePanel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTitlePanel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiListBox1
+            // 
+            this.uiListBox1.FillColor = System.Drawing.Color.White;
+            this.uiListBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiListBox1.Location = new System.Drawing.Point(2, 69);
+            this.uiListBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiListBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiListBox1.Name = "uiListBox1";
+            this.uiListBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.uiListBox1.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiListBox1.ShowText = false;
+            this.uiListBox1.Size = new System.Drawing.Size(126, 82);
+            this.uiListBox1.TabIndex = 4;
+            this.uiListBox1.Text = "uiListBox1";
+            this.uiListBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiRichTextBoxProblemCompletion
             // 
@@ -570,22 +586,7 @@
             this.uiButtonPublish.Text = "发布日报";
             this.uiButtonPublish.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButtonPublish.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiListBox1
-            // 
-            this.uiListBox1.FillColor = System.Drawing.Color.White;
-            this.uiListBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiListBox1.Location = new System.Drawing.Point(2, 69);
-            this.uiListBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiListBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiListBox1.Name = "uiListBox1";
-            this.uiListBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.uiListBox1.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
-            this.uiListBox1.ShowText = false;
-            this.uiListBox1.Size = new System.Drawing.Size(126, 82);
-            this.uiListBox1.TabIndex = 4;
-            this.uiListBox1.Text = "uiListBox1";
-            this.uiListBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiButtonPublish.Click += new System.EventHandler(this.uiButtonPublish_Click);
             // 
             // uiTitlePanel8
             // 
@@ -611,80 +612,6 @@
             this.uiTitlePanel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiTitlePanel8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiTitlePanel8.Click += new System.EventHandler(this.uiTitlePanel8_Click);
-            // 
-            // uiMarkLabel4
-            // 
-            this.uiMarkLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiMarkLabel4.Location = new System.Drawing.Point(3, 192);
-            this.uiMarkLabel4.Name = "uiMarkLabel4";
-            this.uiMarkLabel4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.uiMarkLabel4.Size = new System.Drawing.Size(127, 23);
-            this.uiMarkLabel4.TabIndex = 1;
-            this.uiMarkLabel4.Text = "任务列表:";
-            this.uiMarkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiMarkLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiListBoxNextTasksList
-            // 
-            this.uiListBoxNextTasksList.FillColor = System.Drawing.Color.White;
-            this.uiListBoxNextTasksList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiListBoxNextTasksList.Location = new System.Drawing.Point(4, 220);
-            this.uiListBoxNextTasksList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiListBoxNextTasksList.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiListBoxNextTasksList.Name = "uiListBoxNextTasksList";
-            this.uiListBoxNextTasksList.Padding = new System.Windows.Forms.Padding(2);
-            this.uiListBoxNextTasksList.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
-            this.uiListBoxNextTasksList.ShowText = false;
-            this.uiListBoxNextTasksList.Size = new System.Drawing.Size(219, 229);
-            this.uiListBoxNextTasksList.TabIndex = 0;
-            this.uiListBoxNextTasksList.Text = "uiListBox1";
-            this.uiListBoxNextTasksList.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiMarkLabel3
-            // 
-            this.uiMarkLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiMarkLabel3.Location = new System.Drawing.Point(3, 40);
-            this.uiMarkLabel3.Name = "uiMarkLabel3";
-            this.uiMarkLabel3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.uiMarkLabel3.Size = new System.Drawing.Size(127, 23);
-            this.uiMarkLabel3.TabIndex = 3;
-            this.uiMarkLabel3.Text = "输入任务详情:";
-            this.uiMarkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiMarkLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiTextBoxNextWeekTaskDetail
-            // 
-            this.uiTextBoxNextWeekTaskDetail.CanEmpty = true;
-            this.uiTextBoxNextWeekTaskDetail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBoxNextWeekTaskDetail.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.uiTextBoxNextWeekTaskDetail.Location = new System.Drawing.Point(7, 68);
-            this.uiTextBoxNextWeekTaskDetail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBoxNextWeekTaskDetail.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBoxNextWeekTaskDetail.Multiline = true;
-            this.uiTextBoxNextWeekTaskDetail.Name = "uiTextBoxNextWeekTaskDetail";
-            this.uiTextBoxNextWeekTaskDetail.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
-            this.uiTextBoxNextWeekTaskDetail.ShowScrollBar = true;
-            this.uiTextBoxNextWeekTaskDetail.ShowText = false;
-            this.uiTextBoxNextWeekTaskDetail.Size = new System.Drawing.Size(210, 64);
-            this.uiTextBoxNextWeekTaskDetail.TabIndex = 4;
-            this.uiTextBoxNextWeekTaskDetail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBoxNextWeekTaskDetail.Watermark = "";
-            this.uiTextBoxNextWeekTaskDetail.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiButtonNextWeekAddTask
-            // 
-            this.uiButtonNextWeekAddTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButtonNextWeekAddTask.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.uiButtonNextWeekAddTask.Location = new System.Drawing.Point(137, 140);
-            this.uiButtonNextWeekAddTask.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButtonNextWeekAddTask.Name = "uiButtonNextWeekAddTask";
-            this.uiButtonNextWeekAddTask.Radius = 20;
-            this.uiButtonNextWeekAddTask.Size = new System.Drawing.Size(80, 31);
-            this.uiButtonNextWeekAddTask.TabIndex = 16;
-            this.uiButtonNextWeekAddTask.Text = "添加任务";
-            this.uiButtonNextWeekAddTask.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButtonNextWeekAddTask.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.uiButtonNextWeekAddTask.Click += new System.EventHandler(this.uiButtonNextWeekAddTask_Click);
             // 
             // uiLabel3
             // 
@@ -745,6 +672,80 @@
             this.uiComboBoxNextWeekSelectDay.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBoxNextWeekSelectDay.Watermark = "";
             this.uiComboBoxNextWeekSelectDay.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiButtonNextWeekAddTask
+            // 
+            this.uiButtonNextWeekAddTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButtonNextWeekAddTask.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.uiButtonNextWeekAddTask.Location = new System.Drawing.Point(137, 140);
+            this.uiButtonNextWeekAddTask.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButtonNextWeekAddTask.Name = "uiButtonNextWeekAddTask";
+            this.uiButtonNextWeekAddTask.Radius = 20;
+            this.uiButtonNextWeekAddTask.Size = new System.Drawing.Size(80, 31);
+            this.uiButtonNextWeekAddTask.TabIndex = 16;
+            this.uiButtonNextWeekAddTask.Text = "添加任务";
+            this.uiButtonNextWeekAddTask.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButtonNextWeekAddTask.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiButtonNextWeekAddTask.Click += new System.EventHandler(this.uiButtonNextWeekAddTask_Click);
+            // 
+            // uiTextBoxNextWeekTaskDetail
+            // 
+            this.uiTextBoxNextWeekTaskDetail.CanEmpty = true;
+            this.uiTextBoxNextWeekTaskDetail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBoxNextWeekTaskDetail.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.uiTextBoxNextWeekTaskDetail.Location = new System.Drawing.Point(7, 68);
+            this.uiTextBoxNextWeekTaskDetail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTextBoxNextWeekTaskDetail.MinimumSize = new System.Drawing.Size(1, 16);
+            this.uiTextBoxNextWeekTaskDetail.Multiline = true;
+            this.uiTextBoxNextWeekTaskDetail.Name = "uiTextBoxNextWeekTaskDetail";
+            this.uiTextBoxNextWeekTaskDetail.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiTextBoxNextWeekTaskDetail.ShowScrollBar = true;
+            this.uiTextBoxNextWeekTaskDetail.ShowText = false;
+            this.uiTextBoxNextWeekTaskDetail.Size = new System.Drawing.Size(210, 64);
+            this.uiTextBoxNextWeekTaskDetail.TabIndex = 4;
+            this.uiTextBoxNextWeekTaskDetail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiTextBoxNextWeekTaskDetail.Watermark = "";
+            this.uiTextBoxNextWeekTaskDetail.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiMarkLabel3
+            // 
+            this.uiMarkLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiMarkLabel3.Location = new System.Drawing.Point(3, 40);
+            this.uiMarkLabel3.Name = "uiMarkLabel3";
+            this.uiMarkLabel3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.uiMarkLabel3.Size = new System.Drawing.Size(127, 23);
+            this.uiMarkLabel3.TabIndex = 3;
+            this.uiMarkLabel3.Text = "输入任务详情:";
+            this.uiMarkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiMarkLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiMarkLabel4
+            // 
+            this.uiMarkLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiMarkLabel4.Location = new System.Drawing.Point(3, 192);
+            this.uiMarkLabel4.Name = "uiMarkLabel4";
+            this.uiMarkLabel4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.uiMarkLabel4.Size = new System.Drawing.Size(127, 23);
+            this.uiMarkLabel4.TabIndex = 1;
+            this.uiMarkLabel4.Text = "任务列表:";
+            this.uiMarkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiMarkLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiListBoxNextTasksList
+            // 
+            this.uiListBoxNextTasksList.FillColor = System.Drawing.Color.White;
+            this.uiListBoxNextTasksList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiListBoxNextTasksList.Location = new System.Drawing.Point(4, 220);
+            this.uiListBoxNextTasksList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiListBoxNextTasksList.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiListBoxNextTasksList.Name = "uiListBoxNextTasksList";
+            this.uiListBoxNextTasksList.Padding = new System.Windows.Forms.Padding(2);
+            this.uiListBoxNextTasksList.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiListBoxNextTasksList.ShowText = false;
+            this.uiListBoxNextTasksList.Size = new System.Drawing.Size(219, 229);
+            this.uiListBoxNextTasksList.TabIndex = 0;
+            this.uiListBoxNextTasksList.Text = "uiListBox1";
+            this.uiListBoxNextTasksList.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // PageAddWeekly
             // 

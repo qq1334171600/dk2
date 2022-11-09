@@ -21,6 +21,7 @@ namespace dk2.util
         public static RtfUtil _Instance = null;
         public async Task<bool> SaveAndUploadWithRtf(string stuId,string type,UIRichTextBox uirich)
         {
+            string sql = "";
             //路径
             string rootPath = Application.StartupPath + "\\rtf\\"+type+"\\";
             string localFilename = string.Format("{0}-{1}.rtf", DateTime.Now.ToString("yyyy@MM@dd-HH@mm@ss"), stuId);
@@ -48,8 +49,72 @@ namespace dk2.util
                 switch (type)
                 {
                     case "TaskCompletionContent":
-                        string sql = string.Format(
+                         sql = string.Format(
                     "UPDATE table_tasks SET task_completion_content = \"{0}\" WHERE task_id = {1}", HttpUtil.OssRootUrl + remoteFileName, User.currentUser.CurrentTaskId);
+                        if (dB.sqlExcute(sql) > 0)
+                        {
+                            User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    case "WeekTaskCompletionContent":
+                        sql = string.Format(
+                   "UPDATE table_dk_week set week_task_completion_content=\"{1}\" WHERE weekNo={0} AND stu_id=\"{2}\"",User.currentUser.CurrentWeekNo, HttpUtil.OssRootUrl + remoteFileName, User.currentUser.StuId);
+                        if (dB.sqlExcute(sql) > 0)
+                        {
+                            User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    case "WeekProblem":
+                        sql = string.Format(
+                   "UPDATE table_dk_week set week_problem" +
+                   "=\"{1}\" WHERE weekNo={0} AND stu_id=\"{2}\"", User.currentUser.CurrentWeekNo, HttpUtil.OssRootUrl + remoteFileName, User.currentUser.StuId);
+                        if (dB.sqlExcute(sql) > 0)
+                        {
+                            User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    case "WeekProblemCompletion":
+                        sql = string.Format(
+                   "UPDATE table_dk_week set week_problem_completion_content" +
+                   "=\"{1}\" WHERE weekNo={0} AND stu_id=\"{2}\"", User.currentUser.CurrentWeekNo, HttpUtil.OssRootUrl + remoteFileName, User.currentUser.StuId);
+                        if (dB.sqlExcute(sql) > 0)
+                        {
+                            User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    case "WeekGains":
+                        sql = string.Format(
+                   "UPDATE table_dk_week set week_gains" +
+                   "=\"{1}\" WHERE weekNo={0} AND stu_id=\"{2}\"", User.currentUser.CurrentWeekNo, HttpUtil.OssRootUrl + remoteFileName, User.currentUser.StuId);
+                        if (dB.sqlExcute(sql) > 0)
+                        {
+                            User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    case "WeekNotes":
+                        sql = string.Format(
+                   "UPDATE table_dk_week set week_notes" +
+                   "=\"{1}\" WHERE weekNo={0} AND stu_id=\"{2}\"", User.currentUser.CurrentWeekNo, HttpUtil.OssRootUrl + remoteFileName, User.currentUser.StuId);
                         if (dB.sqlExcute(sql) > 0)
                         {
                             User.currentUser.FileUrl = HttpUtil.OssRootUrl + remoteFileName;
@@ -62,9 +127,20 @@ namespace dk2.util
                     default:
                         break;
                 }
-                return true;
+                sql = string.Format(
+                       "UPDATE table_dk_week set week_updatetime" +
+                       "={1} WHERE weekNo={0} AND stu_id=\"{2}\"", User.currentUser.CurrentWeekNo, "now()", User.currentUser.StuId);
+                if (dB.sqlExcute(sql) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
                 //由于tasks是由上周日报生成的，所以这里使用update，并记录最后updateTime
                 
+
             }
             else
             {

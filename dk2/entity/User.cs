@@ -14,6 +14,7 @@ namespace dk2.entity
         private int userRoleId;
         private string fileUrl;
         private string currentTaskId;
+        private string currentWeekNo;
 
         public string StuId { get => stuId; set => stuId = value; }
         public string TeacherName { get => teacherName; set => teacherName = value; }
@@ -21,6 +22,7 @@ namespace dk2.entity
         public int UserRoleId { get => userRoleId; set => userRoleId = value; }
         public string FileUrl { get => fileUrl; set => fileUrl = value; }
         public string CurrentTaskId { get => currentTaskId; set => currentTaskId = value; }
+        public string CurrentWeekNo { get => currentWeekNo; set => currentWeekNo = value; }
 
 
         public static User _CurrentUser = null;

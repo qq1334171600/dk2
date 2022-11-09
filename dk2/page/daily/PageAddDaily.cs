@@ -69,6 +69,7 @@ namespace dk2.page
                 {
                     stuId = "default_empty_stuid";
                 }
+               
                 //保存各模块内容为RTF格式存在本地后上传到七牛云OSS
                 bool taskCompletionContent = await RtfUtil.currentInstance.SaveAndUploadWithRtf(stuId, "TaskCompletionContent", uiRichTextBoxTaskCompletionContent);
                 if (taskCompletionContent)
