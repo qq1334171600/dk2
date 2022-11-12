@@ -20,6 +20,8 @@ namespace dk2.page
     public partial class PageAddDaily : UIPage
     {
         string rtfDirPath = Application.StartupPath + "\\rtf\\";
+        string weekNo ;
+        string dayOfWeek;
         DBUtil dB;
         DataTable data;
         public PageAddDaily()
@@ -65,17 +67,25 @@ namespace dk2.page
                 && CheckUtil.CheckInputEmptyWithRichBox(uiRichTextBoxNotes, this, "请输入备注！")
                 )
             {
+
                 if (stuId.IsNullOrEmpty())
                 {
                     stuId = "default_empty_stuid";
                 }
-               
+                string SelectDailySql = string.Format("SELECT * FROM table_dk_main WHERE dk_week_no={0} AND dk_week_of_day={1} AND stu_id=\"{2}\"", weekNo, dayOfWeek, User.currentUser.StuId);
+                data = dB.selectReturnDataTable(SelectDailySql, "t_daily");
+                int length = data.Rows.Count;
+                if (length > 0)
+                {
+                    ShowErrorDialog("今天已打过卡，若有需要，请选择修改日报！");
+                    return;
+                }
                 //保存各模块内容为RTF格式存在本地后上传到七牛云OSS
                 bool taskCompletionContent = await RtfUtil.currentInstance.SaveAndUploadWithRtf(stuId, "TaskCompletionContent", uiRichTextBoxTaskCompletionContent);
                 if (taskCompletionContent)
                 {
                     uiProcessBar1.Value += 20;
-                    ShowInfoDialog("文档上传成功，链接地址为:"+User.currentUser.FileUrl);
+                    //ShowInfoDialog("文档上传成功，链接地址为:"+User.currentUser.FileUrl);
                 }
                 bool problem = await RtfUtil.currentInstance.SaveAndUploadWithRtf(stuId, "Problem", uiRichTextBoxProblem);
                 if (problem)
@@ -174,9 +184,8 @@ namespace dk2.page
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            uiListBox1.Items.Clear();
-            string weekNo=uiComboBoxWeekNo.Text;
-            string dayOfWeek=uiComboBoxDayOfWeek.Text;
+             weekNo = uiComboBoxWeekNo.Text;
+             dayOfWeek = uiComboBoxDayOfWeek.Text;
             ShowWarningTip("这是第" + weekNo + "周第" + dayOfWeek + "天");
             string taskSql = string.Format("SELECT *  FROM  table_dk_main, table_tasks  " +
                 "WHERE table_dk_main.dk_id = table_tasks.dk_id  " +
@@ -184,10 +193,10 @@ namespace dk2.page
                 "AND dk_week_no = {1} " +
                 "AND dk_week_of_day ={2}", User.currentUser.StuId,weekNo, dayOfWeek);
             data=dB.selectReturnDataTable(taskSql, "t_task");
-            int length=data.Rows.Count;
-            if (length > 0)
+            int dailyCount=data.Rows.Count;
+            if (dailyCount > 0)
             {
-                for (int i = 0; i < length; i++)
+                for (int i = 0; i < dailyCount; i++)
                 {
                     uiListBox1.Items.Add(data.Rows[i]["task_content"]);
                 }
@@ -208,6 +217,8 @@ namespace dk2.page
             {
                 this.SetEnabled();
             }
+            weekNo = uiComboBoxWeekNo.Text;
+            dayOfWeek = uiComboBoxDayOfWeek.Text;
         }
     }
 }

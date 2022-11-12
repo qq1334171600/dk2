@@ -494,7 +494,7 @@
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox1.Size = new System.Drawing.Size(222, 67);
             this.uiGroupBox1.TabIndex = 14;
-            this.uiGroupBox1.Text = "周次选择";
+            this.uiGroupBox1.Text = "当前周次选择";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiGroupBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -541,6 +541,7 @@
             this.uiComboBoxWeekNo.FillColor = System.Drawing.Color.White;
             this.uiComboBoxWeekNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiComboBoxWeekNo.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -568,7 +569,6 @@
             this.uiComboBoxWeekNo.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBoxWeekNo.Size = new System.Drawing.Size(63, 26);
             this.uiComboBoxWeekNo.TabIndex = 0;
-            this.uiComboBoxWeekNo.Text = "1";
             this.uiComboBoxWeekNo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBoxWeekNo.Watermark = "";
             this.uiComboBoxWeekNo.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -583,7 +583,7 @@
             this.uiButtonPublish.Radius = 35;
             this.uiButtonPublish.Size = new System.Drawing.Size(100, 41);
             this.uiButtonPublish.TabIndex = 15;
-            this.uiButtonPublish.Text = "发布日报";
+            this.uiButtonPublish.Text = "发布周报";
             this.uiButtonPublish.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButtonPublish.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.uiButtonPublish.Click += new System.EventHandler(this.uiButtonPublish_Click);
