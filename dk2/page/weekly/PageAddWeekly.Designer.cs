@@ -445,6 +445,7 @@
             this.uiListBoxThisWeekTasks.TabIndex = 0;
             this.uiListBoxThisWeekTasks.Text = "uiListBox1";
             this.uiListBoxThisWeekTasks.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiListBoxThisWeekTasks.DoubleClick += new System.EventHandler(this.uiListBoxThisWeekTasks_DoubleClick);
             // 
             // uiTitlePanel2
             // 
@@ -569,6 +570,7 @@
             this.uiComboBoxWeekNo.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboBoxWeekNo.Size = new System.Drawing.Size(63, 26);
             this.uiComboBoxWeekNo.TabIndex = 0;
+            this.uiComboBoxWeekNo.Text = "0";
             this.uiComboBoxWeekNo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBoxWeekNo.Watermark = "";
             this.uiComboBoxWeekNo.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -672,6 +674,7 @@
             this.uiComboBoxNextWeekSelectDay.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBoxNextWeekSelectDay.Watermark = "";
             this.uiComboBoxNextWeekSelectDay.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiComboBoxNextWeekSelectDay.SelectedIndexChanged += new System.EventHandler(this.uiComboBoxNextWeekSelectDay_SelectedIndexChanged);
             // 
             // uiButtonNextWeekAddTask
             // 

@@ -57,6 +57,35 @@ namespace dk2.page.weekly
         private void uiButton1_Click(object sender, EventArgs e)
         {
             User.currentUser.CurrentWeekNo = uiComboBoxWeekNo.Text;
+            uiListBoxThisWeekTasks.Items.Clear();
+            string weekNo = uiComboBoxWeekNo.Text;
+            string taskSql = string.Format("SELECT * FROM table_dk_main,table_tasks " +
+                "WHERE table_dk_main.dk_id=table_tasks.dk_id " +
+                "AND table_dk_main.stu_id = \"{0}\"  AND dk_week_no = {1} ", User.currentUser.StuId, int.Parse(weekNo));
+
+            data = dB.selectReturnDataTable(taskSql, "t_task");
+            int length = data.Rows.Count;
+            if (length > 0)
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    uiListBoxThisWeekTasks.Items.Add(data.Rows[i]["task_content"]);
+                }
+            }
+            uiListBoxNextTasksList.Items.Clear();
+            string NextSql = string.Format("SELECT * FROM table_dk_main,table_tasks " +
+                "WHERE table_dk_main.dk_id=table_tasks.dk_id " +
+                "AND table_dk_main.stu_id = \"{0}\"  AND dk_week_no = {1} AND dk_week_of_day ={2}", User.currentUser.StuId, int.Parse(weekNo) + 1, uiComboBoxNextWeekSelectDay.Text);
+
+            data = dB.selectReturnDataTable(NextSql, "t_task");
+            length = data.Rows.Count;
+            if (length > 0)
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    uiListBoxNextTasksList.Items.Add(data.Rows[i]["task_content"]);
+                }
+            }
         }
 
         private void uiTitlePanel8_Click(object sender, EventArgs e)
@@ -109,7 +138,7 @@ namespace dk2.page.weekly
                 string taskSql = string.Format("SELECT *  FROM  table_dk_main, table_tasks  " +
                     "WHERE table_dk_main.dk_id = table_tasks.dk_id  " +
                     "AND table_dk_main.stu_id = \"{0}\" " +
-                    "AND dk_week_no = {1} ", User.currentUser.StuId, int.Parse(weekNo));
+                    "AND dk_week_no = {1} ", User.currentUser.StuId, int.Parse(weekNo)+1);
                 data = dB.selectReturnDataTable(taskSql, "t_task");
                 int length = data.Rows.Count;
                 if (length > 0)
@@ -129,10 +158,10 @@ namespace dk2.page.weekly
             {
                 uiListBoxNextTasksList.Items.Clear();
                 string weekNo = uiComboBoxWeekNo.Text;
-                string taskSql = string.Format("SELECT *  FROM  table_dk_main, table_tasks  " +
-                    "WHERE table_dk_main.dk_id = table_tasks.dk_id  " +
-                    "AND table_dk_main.stu_id = \"{0}\" " +
-                    "AND dk_week_no = {1} ", User.currentUser.StuId, weekNo);
+                string taskSql = string.Format("SELECT * FROM table_dk_main,table_tasks " +
+                    "WHERE table_dk_main.dk_id=table_tasks.dk_id " +
+                    "AND table_dk_main.stu_id = \"{0}\"  AND dk_week_no = {1} AND dk_week_of_day ={2}", User.currentUser.StuId, int.Parse(weekNo)+1,uiComboBoxNextWeekSelectDay.Text);
+
                 data = dB.selectReturnDataTable(taskSql, "t_task");
                 int length = data.Rows.Count;
                 if (length > 0)
@@ -226,6 +255,30 @@ namespace dk2.page.weekly
                     ShowErrorTip("发布失败，请检查内容!");
                 }
             }
+        }
+
+        private void uiComboBoxNextWeekSelectDay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uiListBoxNextTasksList.Items.Clear();
+            string weekNo = uiComboBoxWeekNo.Text;
+            string taskSql = string.Format("SELECT * FROM table_dk_main,table_tasks " +
+                "WHERE table_dk_main.dk_id=table_tasks.dk_id " +
+                "AND table_dk_main.stu_id = \"{0}\"  AND dk_week_no = {1} AND dk_week_of_day ={2}", User.currentUser.StuId, int.Parse(weekNo) + 1, uiComboBoxNextWeekSelectDay.Text);
+
+            data = dB.selectReturnDataTable(taskSql, "t_task");
+            int length = data.Rows.Count;
+            if (length > 0)
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    uiListBoxNextTasksList.Items.Add(data.Rows[i]["task_content"]);
+                }
+            }
+        }
+
+        private void uiListBoxThisWeekTasks_DoubleClick(object sender, EventArgs e)
+        {
+            uiTextBoxTaskDetail.Text = uiListBoxThisWeekTasks.SelectedItem.ToString();
         }
     }
 }
